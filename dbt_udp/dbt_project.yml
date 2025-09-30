@@ -1,0 +1,31 @@
+name: 'dbt_udp'
+version: '1.0.0'
+
+# This setting configures which "profile" dbt uses for the project.
+profile: 'dbt_udp'
+
+# These configurations specify where dbt should look for different types of files.
+# The `model-paths` config, for example, states that models in the project can be
+# found in the "models/" directory.
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:         # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_packages"
+
+seeds:
+  dbt_udp:
+    iot_sensors_data:
+      column_types:
+        timestamp: timestamp
+        energy_usage_kWh: float
+        co2_ppm: integer
+        pm25_ug_m3: integer
+        no2_ppb: integer
+        noise_dB: integer
+        parking_occupied: integer

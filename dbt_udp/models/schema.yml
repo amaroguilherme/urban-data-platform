@@ -1,0 +1,14 @@
+
+version: 1
+
+models:
+  - name: iot_sensors
+    description: "Data collected from IoT devices and sensor networks"
+    columns:
+      - name: energy_usage_kWh
+      - name: air_quality_co2
+      - name: air_quality_pm25
+      - name: air_quality_no2
+      - name: noise_dB
+      - name: is_parking_occupied
+      - name: created_at

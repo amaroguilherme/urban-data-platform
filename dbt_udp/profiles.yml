@@ -1,0 +1,11 @@
+dbt_udp:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: urban-data-platform
+      dataset: dbt
+      threads: 4
+      timeout_seconds: 300
+      location: US
