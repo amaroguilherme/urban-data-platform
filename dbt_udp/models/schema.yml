@@ -12,3 +12,61 @@ models:
       - name: noise_dB
       - name: is_parking_occupied
       - name: created_at
+  - name: building_energy_reports
+    description: "Data collected from buildings regarding energy consumption"
+    columns:
+      - name: building_id
+      - name: energy_consumption_kWh
+      - name: area_m2
+      - name: efficiency_score
+      - name: hvac_usage_percent
+      - name: lighting_usage_percent
+      - name: report_date
+  - name: building_water_reports
+    description: "Data collected from buildings regarding water consumption"
+    columns:
+      - name: building_id
+      - name: flow_rate_liters_min
+      - name: daily_total_liters
+      - name: leak_detected
+      - name: created_at
+  - name: bike_share_trips_data
+    description: "Data regarding trips per bike at a given station"
+    columns:
+      - name: bike_id
+      - name: trip_start
+      - name: trip_end
+      - name: duration_min
+      - name: distance_km
+      - name: station_start
+      - name: station_end
+  - name: ev_charging_sessions
+    description: "Data regarding a charging session for a given electric vehicle"
+    columns:
+      - name: vehicle_id
+      - name: station_id
+      - name: session_start
+      - name: session_end
+      - name: energy_kWh
+      - name: duration_min
+      - name: cost_usd
+  - name: ride_hailing_trips_data
+    description: "Data regarding ride-hailing trips per driver"
+    columns:
+      - name: driver_id
+      - name: vehicle_id
+      - name: trip_start
+      - name: trip_end
+      - name: duration_min
+      - name: distance_km
+      - name: fare_usd
+  - name: weather_forecasts_data
+    description: "Data regarding weather forecasts"
+    columns:
+      - name: forecast_date
+      - name: condition
+      - name: temp_high_C
+      - name: temp_low_C
+      - name: precipitation_mm
+      - name: humidity_percent
+      - name: wind_speed_kmh

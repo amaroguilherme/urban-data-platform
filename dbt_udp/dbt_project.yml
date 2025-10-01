@@ -29,3 +29,55 @@ seeds:
         no2_ppb: integer
         noise_dB: integer
         parking_occupied: integer
+    building_energy_data:
+      column_types:
+        report_date: timestamp
+        building_id: string
+        energy_consumption_kWh: integer
+        area_m2: integer
+        efficiency_score: float
+        hvac_usage_percent: integer
+        lighting_usage_percent: integer
+    water_usage_logs:
+      column_types:
+        timestamp: timestamp
+        building_id: string
+        flow_rate_liters_min: integer
+        daily_total_liters: integer
+        leak_detected: integer
+    bike_share_trips:
+      column_types:
+        trip_start: timestamp
+        trip_end: timestamp
+        duration_min: integer
+        distance_km: integer
+        bike_id: string
+        station_start: string
+        station_end: string
+    ev_charging_logs:
+      column_types:
+        session_start: timestamp
+        session_end: timestamp
+        station_id: string
+        vehicle_id: string
+        energy_kWh: integer
+        duration_min: integer
+        cost_usd: integer
+    ride_hailing_trips:
+      column_types:
+        trip_start: timestamp
+        trip_end: timestamp
+        duration_min: integer
+        distance_km: integer
+        fare_usd: integer
+        driver_id: string
+        vehicle_id: string
+    weather_forecasts:
+      column_types:
+        forecast_date: timestamp
+        condition: string
+        temp_high_C: integer
+        temp_low_C: integer
+        precipitation_mm: integer
+        humidity_percent: integer
+        wind_speed_kmh: integer
