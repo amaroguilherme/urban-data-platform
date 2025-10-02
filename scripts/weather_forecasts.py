@@ -3,7 +3,7 @@ import random
 import datetime
 
 NUM_RECORDS = 500
-OUTPUT_FILE = "temp/weather_forecasts.csv"
+OUTPUT_FILE = "dbt_udp/seeds/weather_forecasts_data.csv"
 
 
 def random_date(start, end):

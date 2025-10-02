@@ -60,11 +60,11 @@ def save_to_csv(data, filename):
 
 if __name__ == "__main__":
     energy_data = generate_building_energy(NUM_RECORDS)
-    save_to_csv(energy_data, "temp/building_energy_reports.csv")
+    save_to_csv(energy_data, "dbt_udp/seeds/building_energy_data.csv")
 
     water_data = generate_water_usage(NUM_RECORDS)
-    save_to_csv(water_data, "temp/water_usage_logs.csv")
+    save_to_csv(water_data, "dbt_udp/seeds/water_usage_logs.csv")
 
     print("✅ Generated datasets:")
-    print("- building_energy_reports.csv")
+    print("- building_energy_data.csv")
     print("- water_usage_logs.csv")

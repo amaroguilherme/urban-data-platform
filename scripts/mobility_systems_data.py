@@ -89,15 +89,15 @@ def save_to_csv(data, filename):
 
 if __name__ == "__main__":
     bike_data = generate_bike_share(NUM_RECORDS)
-    save_to_csv(bike_data, "temp/bike_share_trips.csv")
+    save_to_csv(bike_data, "dbt_udp/seeds/bike_share_trips_data.csv")
 
     ev_data = generate_ev_charging(NUM_RECORDS)
-    save_to_csv(ev_data, "temp/ev_charging_logs.csv")
+    save_to_csv(ev_data, "dbt_udp/seeds/ev_charging_logs.csv")
 
     ride_data = generate_ride_hailing(NUM_RECORDS)
-    save_to_csv(ride_data, "temp/ride_hailing_trips.csv")
+    save_to_csv(ride_data, "dbt_udp/seeds/ride_hailing_trips_data.csv")
 
     print("✅ Generated datasets:")
-    print("- bike_share_trips.csv")
+    print("- bike_share_trips_data.csv")
     print("- ev_charging_logs.csv")
-    print("- ride_hailing_trips.csv")
+    print("- ride_hailing_trips_data.csv")

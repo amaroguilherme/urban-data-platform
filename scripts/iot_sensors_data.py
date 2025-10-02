@@ -4,7 +4,7 @@ import datetime
 
 NUM_RECORDS = 500
 
-OUTPUT_FILE = "temp/iot_sensors_data.csv"
+OUTPUT_FILE = "dbt_udp/seeds/iot_sensors_data.csv"
 
 
 def random_timestamp(start, end):
